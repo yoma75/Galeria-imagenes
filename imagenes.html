@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Galeria de imagenes</title>
+
+	<!-- Agregar logo a la pestaña -->
+  	<link rel="shortcut icon" type="text/css" href="" />
+
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!--Iconos Fontawesome 5-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="imagenes.css" type="text/css">
+    
+</head>
+<body>
+
+    <div class="images">
+        <img onclick="changeimg(this)" src="img/p1.jpg" alt="">
+        <img onclick="changeimg(this)" src="img/p2.jpg" alt="">
+        <img onclick="changeimg(this)" src="img/p3.jpg" alt="">
+        <img onclick="changeimg(this)" src="img/p4.jpg" alt="">  
+    </div>
+
+    <div class="pre">
+        <a onclick="this.parentElement.style.display='none'" class="far fa-times-circle"></a>
+        <img id="p" src="img/p1.jpg" alt="">
+    </div>
+
+    <script type="text/javascript">
+        function changeimg(image) {
+            var p = document.getElementById("p");
+            p.src = image.src;
+            p.parentElement.style.display = "block";
+        }
+    </script>
+
+
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
